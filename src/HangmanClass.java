@@ -1,16 +1,22 @@
-import java.util.Random;
+
 import java.util.Scanner;
 
 public class HangmanClass {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        Random random = new Random();
-        String [] towns = {"Враца", "София", "Пловдив", "Стара Загора", "Русе", "Варна", "Плевен", "Бургас",
-        "Ахтопол", "Айтос", "Асеновград", "Бяла Слатина", "Тетевен", "Етрополе", "Благовеград", "Ботевград", "Шумен",
-        "Карлово", "Хасково", "Калофер", "Казанлък", "Пазарджик", "Велико Търново", "Видин", "Монтана", "Асеново",
-        "Димитровград", "Козлодуй", "Боровец", "Пампорово", "Сливен", "Смолян", "Несебър", "Новачене", "Нова Загора",
-                "Баница", "Борован", "Батак", "Бели извор", "Созопол", "Свиленград", "Ивайлово", "Поморие", "Перник"};
+        Scanner sc = new Scanner(System.in);
 
+        boolean doYowantToPlay = true;
+        while (doYowantToPlay) {
+
+            while (!game.gameOver()){
+
+            }
+            System.out.println();
+            System.out.println("Искате ли още една игра? Натиснете Y");
+            Character response = (sc.next().toUpperCase()).charAt(0);
+            doYowantToPlay = (response == 'Y');
+
+
+        }
     }
-
 }
