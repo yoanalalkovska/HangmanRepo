@@ -45,4 +45,15 @@ public class HangmanContinue {
         int wordIndex = Math.abs (rand.nextInt())%dictionary.size();
         return dictionary.get(wordIndex);
     }
+    public StringBuilder initializeCurrentGuess(){
+        StringBuilder current = new StringBuilder();
+        for (int i = 0; i < mysteryWord.length()*2; i++) {
+            if (i%2==0){
+                current.append("_");
+
+            }
+
+        }
+        return current;
+    }
 }
