@@ -36,7 +36,7 @@ public class HangmanClass {
 //                    "|\n");
 
 
-            else if (incorrectAttempts==1){
+             if (incorrectAttempts==1){
                 System.out.println(" - - - - -\n"+
                                    "|        |\n"+
                                    "|        \n" +
@@ -131,6 +131,15 @@ public class HangmanClass {
                 System.out.print("\n");
 
             }
+            System.out.println("Guess a letter: ");
+            guess = input.nextLine();
+            guess = guess.toUpperCase();
+            letter = guess.charAt(0);
+            alreadyGuessedLetters = (allGuessedLetters.indexOf(letter)) != -1;
+            allGuessedLetters += letter; // stores every letter guessed in guesses
+
+            letter = Character.toUpperCase(letter); // converts to uppercase for comparison
+            System.out.print("\n");
         }
     }
 
