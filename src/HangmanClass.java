@@ -21,11 +21,116 @@ public class HangmanClass {
         String allGuessedLetters = "";
         boolean correctGuess; //boolean for guess in chosenTown
 
-        while (incorrectAttempts<10&&replacingTheChosenTownWithDashes.contains("_")){
+        while (incorrectAttempts<9&&replacingTheChosenTownWithDashes.contains("_")){
             System.out.println(replacingTheChosenTownWithDashes);
             System.out.print("\n");
             System.out.println("You have " + incorrectAttempts + " incorrect guesses so far.");
             System.out.print("\n");
+//                    " - - - - -\n"+
+//                    "|        |\n"+
+//                    "|        O\n" +
+//                    "|      / | \\ \n"+
+//                    "|        |\n" +
+//                    "|       / \\ \n" +
+//                    "|\n" +
+//                    "|\n");
+
+
+            else if (incorrectAttempts==1){
+                System.out.println(" - - - - -\n"+
+                                   "|        |\n"+
+                                   "|        \n" +
+                                   "|      \n"+
+                                   "|        \n" +
+                                   "|        \n" +
+                                   "|\n" +
+                                   "|\n");
+                System.out.print("\n");
+            }
+            else if (incorrectAttempts==2){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|      \n"+
+                        "|        \n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==3){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|        |\n"+
+                        "|        \n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==4){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|        |\\\n"+
+                        "|        \n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==5){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|       /|\\\n"+
+                        "|        \n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==6){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|       /|\\\n"+
+                        "|        |\n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==7){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|       /|\\\n"+
+                        "|        |\n" +
+                        "|       /\n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
+            else if (incorrectAttempts==8){
+                System.out.println(" - - - - -\n"+
+                        "|        |\n"+
+                        "|        O\n" +
+                        "|       /|\\ \n"+
+                        "|        |\n" +
+                        "|       / \\\n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+
+            }
         }
     }
 
