@@ -15,6 +15,18 @@ public class HangmanClass {
 
         int attempts = 0;
         int incorrectAttempts = 0;
+        String guess; //stores the guessed letter we have input
+        char letter; // pulls out the first letter from guess for use
+        boolean alreadyGuessedLetters;
+        String allGuessedLetters = "";
+        boolean correctGuess; //boolean for guess in chosenTown
+
+        while (incorrectAttempts<10&&replacingTheChosenTownWithDashes.contains("_")){
+            System.out.println(replacingTheChosenTownWithDashes);
+            System.out.print("\n");
+            System.out.println("You have " + incorrectAttempts + " incorrect guesses so far.");
+            System.out.print("\n");
+        }
     }
 
     }
