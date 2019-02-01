@@ -119,18 +119,7 @@ public class HangmanClass {
                 System.out.print("\n");
 
             }
-            else if (incorrectAttempts==8){
-                System.out.println(" - - - - -\n"+
-                        "|        |\n"+
-                        "|        O\n" +
-                        "|       /|\\ \n"+
-                        "|        |\n" +
-                        "|       / \\\n" +
-                        "|\n" +
-                        "|\n");
-                System.out.print("\n");
 
-            }
             System.out.println("Guess a letter: ");
             guess = input.nextLine();
             guess = guess.toUpperCase();
@@ -140,6 +129,55 @@ public class HangmanClass {
 
             letter = Character.toUpperCase(letter); // converts to uppercase for comparison
             System.out.print("\n");
+
+            if (alreadyGuessedLetters == true) {
+                System.out.println("You already guessed " + letter + ".");
+                System.out.print("\n");
+            }
+            correctGuess = (chosenTown.indexOf(letter)) != -1;
+            if (correctGuess == true) {
+                System.out.println(letter + " is in the phrase.");
+                System.out.print("\n");
+                for (int position = 0; position < chosenTown.length(); position++) {
+                    if (chosenTown.charAt(position) == letter && replacingTheChosenTownWithDashes.charAt(position) != letter) {
+                        replacingTheChosenTownWithDashes = replacingTheChosenTownWithDashes.replaceAll("_ ", "_");
+                        String phrase2;
+                        phrase2 = replacingTheChosenTownWithDashes.substring(0, position) + letter + replacingTheChosenTownWithDashes.substring(position + 1);
+                        phrase2 = phrase2.replaceAll("_", "_ ");
+                        replacingTheChosenTownWithDashes = phrase2;
+                    }
+                    else {
+                        System.out.print("\n");
+                        System.out.println(letter + " is in not the town.");
+                        System.out.print("\n");
+                        incorrectAttempts++;
+                    }
+
+                    attempts++;
+
+                }
+                  if (incorrectAttempts==8){
+                    System.out.println(" - - - - -\n"+
+                            "|        |\n"+
+                            "|        O\n" +
+                            "|       /|\\ \n"+
+                            "|        |\n" +
+                            "|       / \\\n" +
+                            "|\n" +
+                            "|\n");
+                    System.out.print("\n");
+                      System.out.println("Sorry, but you just lost the game ;c. Game over.");
+
+                }
+                else {
+                      System.out.println("The town is:");
+                      System.out.println(chosenTown);
+                      System.out.println("Congrats, player, you guessed the town correctly!");
+                  }
+                  input.close ();
+                }
+
+
         }
     }
 
