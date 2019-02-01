@@ -1,24 +1,22 @@
-
 import java.util.Scanner;
 
 public class HangmanClass {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to Hangman! The computer will think of a city/village " +
-                "in Bulgaria in Bulgarian and you gotta guess it.");
+        Scanner input = new Scanner(System.in);
+        String [] towns = {"Vratsa", "Botevgrad", "Sofia", "Sliven", "Stara Zagora", "Smolyan", "Borovets", "Dimitrovgrad"};
+        String chosenTown = towns [(int) (Math.random() * towns.length)];
+        chosenTown = chosenTown.toUpperCase();
+        String replacingTheChosenTownWithDashes = chosenTown.replaceAll("[A-Z]", "_");
 
-        boolean doYowantToPlay = true;
-        while (doYowantToPlay) {
+        System.out.println("\n");
+        System.out.println("\n");
 
-            while (!game.gameOver()){
+        System.out.println("Lets play Hangman. You have to guess a city/village situated in Bulgaria. Good luck ♥");
 
-            }
-            System.out.println();
-            System.out.println("Wanna play again? Press Y");
-            Character response = (sc.next().toUpperCase()).charAt(0);
-            doYowantToPlay = (response == 'Y');
-
-
-        }
+        int attempts = 0;
+        int incorrectAttempts = 0;
     }
-}
+
+    }
+
+
