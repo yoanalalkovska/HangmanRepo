@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class HangmanClass {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String[] towns = {"Vratsa", "Botevgrad", "Sofia", "Sliven", "Stara Zagora", "Smolyan", "Borovets", "Dimitrovgrad"};
+        String[] towns = {"Vratsa", "Botevgrad", "Sofia", "Sliven", "Stara Zagora", "Smolyan", "Borovets", "Dimitrovgrad",
+                "Plovdiv", "Pleven", "Varna", "Burgas", "Yambol"};
         String chosenTown = towns[(int) (Math.random() * towns.length)];
         chosenTown = chosenTown.toUpperCase();
         String replacingTheChosenTownWithDashes = chosenTown.replaceAll("[A-Z]", "_ ");
@@ -46,7 +47,8 @@ public class HangmanClass {
                         "|\n" +
                         "|\n");
                 System.out.print("\n");
-            } else if (incorrectAttempts == 2) {
+            }
+            if (incorrectAttempts == 2) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -57,7 +59,8 @@ public class HangmanClass {
                         "|\n");
                 System.out.print("\n");
 
-            } else if (incorrectAttempts == 3) {
+            }
+            if (incorrectAttempts == 3) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -68,7 +71,8 @@ public class HangmanClass {
                         "|\n");
                 System.out.print("\n");
 
-            } else if (incorrectAttempts == 4) {
+            }
+            if (incorrectAttempts == 4) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -79,7 +83,8 @@ public class HangmanClass {
                         "|\n");
                 System.out.print("\n");
 
-            } else if (incorrectAttempts == 5) {
+            }
+            if (incorrectAttempts == 5) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -90,7 +95,8 @@ public class HangmanClass {
                         "|\n");
                 System.out.print("\n");
 
-            } else if (incorrectAttempts == 6) {
+            }
+            if (incorrectAttempts == 6) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -101,7 +107,8 @@ public class HangmanClass {
                         "|\n");
                 System.out.print("\n");
 
-            } else if (incorrectAttempts == 7) {
+            }
+            if (incorrectAttempts == 7) {
                 System.out.println(" - - - - -\n" +
                         "|        |\n" +
                         "|        O\n" +
@@ -111,8 +118,27 @@ public class HangmanClass {
                         "|\n" +
                         "|\n");
                 System.out.print("\n");
+            }
+            if (incorrectAttempts == 8) {
+                System.out.println(" - - - - -\n" +
+                        "|        |\n" +
+                        "|        O\n" +
+                        "|       /|\\ \n" +
+                        "|        |\n" +
+                        "|       / \\\n" +
+                        "|\n" +
+                        "|\n");
+                System.out.print("\n");
+                System.out.println("Sorry, but you just lost the game ;c. Game over.");
+                System.out.println("The town is: " + chosenTown);
+
 
             }
+            if (replacingTheChosenTownWithDashes.equals(chosenTown)) {
+                System.out.println("The town is: " + chosenTown);
+                System.out.println("Congrats, player, you guessed the town correctly!");
+            }
+//sth isnt workin properly?
 
             System.out.println("Guess a letter: ");
             guess = input.nextLine();
@@ -141,36 +167,18 @@ public class HangmanClass {
                         replacingTheChosenTownWithDashes = phrase2;
                     }
                 }
-                    } else {
-                        System.out.print("\n");
-                        System.out.println(letter + " is in not the town.");
-                        System.out.print("\n");
-                        incorrectAttempts++;
-                    }
-
-                    attempts++;
-
-
-            }
-            if (incorrectAttempts == 8) {
-                System.out.println(" - - - - -\n" +
-                        "|        |\n" +
-                        "|        O\n" +
-                        "|       /|\\ \n" +
-                        "|        |\n" +
-                        "|       / \\\n" +
-                        "|\n" +
-                        "|\n");
-                System.out.print("\n");
-                System.out.println("Sorry, but you just lost the game ;c. Game over.");
-
             } else {
-                System.out.println("The town is:");
-                System.out.println(chosenTown);
-                System.out.println("Congrats, player, you guessed the town correctly!");
+                System.out.print("\n");
+                System.out.println(letter + " is in not the town.");
+                System.out.print("\n");
+                incorrectAttempts++;
             }
-            input.close();
 
+            attempts++;
+
+        }
+
+        input.close();
 
 
     }
